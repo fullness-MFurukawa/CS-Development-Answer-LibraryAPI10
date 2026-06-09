@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Apps/">
+    <Project Path="Apps/LibraryApi.Applications/LibraryApi.Applications.csproj" />
+    <Project Path="Apps/LibraryApi.Domains/LibraryApi.Domains.csproj" />
+    <Project Path="Apps/LibraryApi.Infrastructures/LibraryApi.Infrastructures.csproj" />
+    <Project Path="Apps/LibraryApi.Presentations/LibraryApi.Presentations.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/LibraryApi.Applications.Tests/LibraryApi.Applications.Tests.csproj" />
+    <Project Path="Tests/LibraryApi.Domains.Tests/LibraryApi.Domains.Tests.csproj" />
+    <Project Path="Tests/LibraryApi.Infrastructures.Tests/LibraryApi.Infrastructures.Tests.csproj" />
+    <Project Path="Tests/LibraryApi.Presentations.Tests/LibraryApi.Presentations.Tests.csproj" />
+  </Folder>
+</Solution>
