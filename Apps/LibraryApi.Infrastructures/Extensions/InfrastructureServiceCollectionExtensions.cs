@@ -8,6 +8,7 @@ using LibraryApi.Domains.Models;
 using LibraryApi.Domains.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using LibraryApi.Infrastructure.Repositories;
 namespace LibraryApi.Infrastructure.Extensions;
 /// <summary>
 /// インフラストラクチャ層の構成要素を DI コンテナへ登録する拡張メソッドを提供する
@@ -55,9 +56,9 @@ public static class InfrastructureServiceCollectionExtensions
         // AppDbContext(Scoped)に依存するため Scoped で登録する
         // ───────────────────────────────────────────
         
-        //services.AddScoped<ICategoryRepository, CategoryRepository>();
-        //services.AddScoped<IBookRepository, BookRepository>();
-        //services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IBookRepository, BookRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
         // ───────────────────────────────────────────
         // UnitOfWork(トランザクション境界の制御)
