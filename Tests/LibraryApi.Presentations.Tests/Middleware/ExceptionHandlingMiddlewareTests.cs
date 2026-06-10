@@ -64,7 +64,7 @@ public class ExceptionHandlingMiddlewareTests
         Assert.AreEqual("CategoryNotFound", error);
     }
 
-    [TestMethod("ConflictExceptionを409とエラーコードに変換する")]
+    [TestMethod(DisplayName = "ConflictExceptionを409とエラーコードに変換する")]
     public async Task InvokeAsync_TestCase03()
     {
         var (status, error, _) = await InvokeWithExceptionAsync(

@@ -9,6 +9,8 @@ using LibraryApi.Domains.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using LibraryApi.Infrastructure.Repositories;
+using LibraryApi.Applications.UseCases.UnitOfWorks;
+using LibraryApi.Infrastructures.UnitOfWorks;
 namespace LibraryApi.Infrastructure.Extensions;
 /// <summary>
 /// インフラストラクチャ層の構成要素を DI コンテナへ登録する拡張メソッドを提供する
@@ -66,7 +68,7 @@ public static class InfrastructureServiceCollectionExtensions
         // インターフェイス IUnitOfWork はアプリケーション層、実装 UnitOfWork はインフラ層にあり、
         // 実装が属する本層で登録する(依存性逆転:アプリケーション層は実装を知らない)。
         // ───────────────────────────────────────────
-        //services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }
